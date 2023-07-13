@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[3]:
+
+'''
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+tokenizer = AutoTokenizer.from_pretrained("jonaskoenig/topic_classification_04")
+model = AutoModelForSequenceClassification.from_pretrained("jonaskoenig/topic_classification_04", from_tf=True)
+
+def classify_text(some_text):
+  classifications = {0: 'society and culture', 1:'Science', 2:'Health', 3:'education', 4:'Computers and Internet', 5:'sports', 6:'Finance', 7: 'Entertainment and Music', 8:'Family and Relationships', 9:'Politics and Government'}
+  inputs = tokenizer.encode_plus(some_text, padding="longest", truncation=True, return_tensors="pt")
+  outputs = model(**inputs)
+  logits = outputs.logits
+  probabilities = logits.softmax(dim=1)
+  max_index = list((probabilities[0])).index(max(list((probabilities[0]))))
+  return classifications[max_index]
+'''
+def print_hello():
+    return('hello world')
+
+# In[ ]:
+
+
+
+
